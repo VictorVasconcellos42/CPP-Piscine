@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 01:56:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 03:54:40 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/18 04:43:19 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon)
 
 HumanA::~HumanA(void)
 {
-	std::cout << this->name << " is dead" << std::endl;
+	std::cout << this->name << " left your weapon" << std::endl;
 	return ;
 }
 

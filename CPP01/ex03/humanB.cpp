@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 01:56:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 04:06:02 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/18 04:43:09 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ HumanB::HumanB(std::string name) : name(name) , weapon(nullptr)
 
 HumanB::~HumanB(void)
 {
-	std::cout << this->name << " is dead" << std::endl;
+	std::cout << this->name << " left your weapon" << std::endl;
+	delete this->weapon;
 	return ;
 }
 
