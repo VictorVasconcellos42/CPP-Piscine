@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 01:28:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/17 23:02:27 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/17 23:39:43 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,13 +86,5 @@ void	PhoneBook::searchContact(void)
 			<< this->contact[i].getDarkestSecret() << " | " << std::endl;
 	}
 }
-
-/* void	PhoneBook::addContact(Contact contact)
-{
-	this->contact[this->index] = contact;
-	if (count < 8)
-		count++;
-	this->index = (this->index + 1) % 8;
-} */
 
 int PhoneBook::count = 0;
