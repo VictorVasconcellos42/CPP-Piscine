@@ -16,7 +16,7 @@ CXX	=	c++
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = contact.cpp phonebook.cpp
+SRCS = main.cpp contact.cpp phoneBook.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
