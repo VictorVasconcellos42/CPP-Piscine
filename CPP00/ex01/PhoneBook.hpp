@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phoneBook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 15:13:36 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/04/22 17:14:59 by vde-vasc         ###   ########.fr       */
+/*   Created: 2023/07/16 18:06:07 by vde-vasc          #+#    #+#             */
+/*   Updated: 2023/07/17 20:12:34 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include <iostream>
 
 class PhoneBook
-
 {
-	public:
-	    PhoneBook();
-		~PhoneBook();
+private:
+	Contact		array[8];
+	int			index;
+	static int	count;
+public:
+	PhoneBook();
+	~PhoneBook();
 
-		void addContact(void);
-		void searchList(Contact *contact, int amountOfContactC);
-		std::string	handlerString(std::string name);
-
-	private:
-	    Contact contact[8];
-		int	 	amountOfContact;
+	void addContact(Contact contact);
+	Contact getContact(int i) const;
+	int getCount() const;
 };
+
 
 #endif
