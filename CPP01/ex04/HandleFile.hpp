@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 04:59:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 05:15:18 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:42:30 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <string>
 
 class HandleFile
 {

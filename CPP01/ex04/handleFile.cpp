@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 05:03:49 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 05:52:10 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/19 16:56:06 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ HandleFile::~HandleFile(void)
 
 void	HandleFile::setFile(std::string file)
 {
-	this->file.open(file.c_str());
+	this->file.open(file);
 	this->outFile.open(file + ".replace");
 }
 
@@ -43,14 +43,22 @@ void	HandleFile::setS2(std::string s2)
 void	HandleFile::replace(void)
 {
 	std::string	line;
-	
-	while (std::getline(this->file, line, ' '))
+	std::size_t	pos;
+	std::size_t	len;
+
+	while (std::getline(this->file, line))
 	{
-		if (line == this->s1)
-			this->outFile << this->s2;
-		else
-			this->outFile << line;
-		if (!this->outFile.eof())
-			this->outFile << " ";
+		pos = 0;
+		len = this->s1.length();
+		while ((pos = line.find(this->s1, pos)) != std::string::npos)
+		{
+			line.erase(pos, len);
+			line.insert(pos, this->s2);
+			if (len > this->s2.length())
+				pos += this->s2.length();
+			else
+				pos += len;
+		}
+		this->outFile << line << std::endl;
 	}
 }
