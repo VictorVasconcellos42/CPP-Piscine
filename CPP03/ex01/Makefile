@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = scavtrap
 
 CXX	=	c++
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp ScavTrap.cpp ClapTrap.cpp
 
 
 
