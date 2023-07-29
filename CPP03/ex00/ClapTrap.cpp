@@ -6,11 +6,20 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 13:34:39 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/27 17:15:44 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/28 13:24:55 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(void)
+{
+	hitPoint = 10;
+	energyPoint = 10;
+	attackDamage = 0;
+	name = "Vasquinho";
+	std::cout << "ClapTrap Vasquinho Created!" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string newName) : name(newName)
 {
@@ -23,6 +32,23 @@ ClapTrap::ClapTrap(std::string newName) : name(newName)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap " << name << " Destroyed!" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &src)
+{
+	*this = src;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &src)
+{
+	if (this != &src)
+	{
+		setName(src.getName());
+		setHitPoint(src.getHitPoint());
+		setEnergyPoint(src.getEnergyPoint());
+		setAttackDamage(src.getAttackDamage());
+	}
+	return (*this);
 }
 
 unsigned int ClapTrap::getAttackDamage(void) const

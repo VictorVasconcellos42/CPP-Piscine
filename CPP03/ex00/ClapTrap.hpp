@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 13:14:46 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/27 16:18:46 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/28 20:04:04 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class ClapTrap
 		unsigned int	energyPoint;
 		unsigned int	attackDamage;
 	public:
+		ClapTrap(void);
 		ClapTrap(std::string newName);
 		ClapTrap(const ClapTrap &copy);
 		ClapTrap&operator=(const ClapTrap &src);
