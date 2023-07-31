@@ -16,7 +16,7 @@ CXX	=	c++
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp humanA.cpp humanB.cpp weapon.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 
 

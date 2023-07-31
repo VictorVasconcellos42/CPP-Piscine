@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 01:54:53 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 03:50:03 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:51:50 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,15 @@ class HumanB
 		std::string	name;
 		Weapon		*weapon;
 	public:
+		HumanB(void);
 		HumanB(std::string name);
 		~HumanB();
-		Weapon	*getWeapon(void) const;
-		void	setWeapon(Weapon weapon);
-		void	attack(void);	
+
+		std::string	getName(void) const;
+		void		setName(std::string name);
+		Weapon		*getWeapon(void) const;
+		void		setWeapon(Weapon weapon);
+		void		attack(void);
 };
 
 #endif

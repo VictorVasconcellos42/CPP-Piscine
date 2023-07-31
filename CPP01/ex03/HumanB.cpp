@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   humanB.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 01:56:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 04:43:09 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:54:02 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
+
+HumanB::HumanB(void): weapon(nullptr)
+{
+	this->name = "Vasquinho";
+}
 
 HumanB::HumanB(std::string name) : name(name) , weapon(nullptr)
 {
@@ -35,6 +40,16 @@ void HumanB::attack()
 Weapon*	HumanB::getWeapon(void) const
 {
 	return (this->weapon);
+}
+
+std::string	HumanB::getName(void) const
+{
+	return (this->name);
+}
+
+void	HumanB::setName(std::string newName)
+{
+	this->name = newName;
 }
 
 void HumanB::setWeapon(Weapon weapon)
