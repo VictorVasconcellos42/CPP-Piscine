@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 10:12:05 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 15:32:32 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/31 15:35:38 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,16 @@ Cat::Cat(const Cat &copy): Animal()
 Cat	&Cat::operator=(const Cat &src)
 {
 	if (this != &src)
+	{
+		if (this->brain)
+		{
+			delete this->brain;
+			this->brain = nullptr;
+		}
+		if (src.brain)
+			this->brain = new Brain(*src.brain);
 		this->type = src.getType();
+	}
 	return (*this);
 }
 
@@ -39,6 +48,6 @@ Cat::~Cat(void)
 
 void	Cat::makeSound(void)
 {
-	std::cout << this->getType() << "Meow Meow :3" << std::endl;
+	std::cout << this->getType() << ": Meow Meow :3" << std::endl;
 }
 

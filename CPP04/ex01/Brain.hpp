@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 15:20:22 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 15:24:42 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/31 16:12:43 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,7 @@ class Brain
 		Brain(const Brain &cpy);
 		Brain&operator=(const Brain &src);
 		~Brain();
+
+		std::string	getOneIdeal(unsigned int i) const ;
+		void		setOneIdeal(std::string, unsigned int i);
 };
