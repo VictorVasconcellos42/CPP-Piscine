@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 00:10:26 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 00:10:39 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:29:22 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	randomChump(std::string name)
 {
-	Zombie zombie;
-
-	zombie.setZombieName(name);
+	Zombie zombie(name);
 	zombie.announce();
+	return ;
 }

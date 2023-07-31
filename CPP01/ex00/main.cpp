@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 00:11:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/18 00:15:47 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:35:01 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,21 @@
 
 int	main(void)
 {
-	Zombie	human_code;
-	Zombie	*robot_code;
+	Zombie	humanCode("Joao Vitor");
+	Zombie	*robotCode;
 
-	human_code.setZombieName("Joao Vitor");
-	human_code.announce();
-
-	robot_code = newZombie("Thiago Firmino");
-	robot_code->announce();
+	std::cout << "Zombie Normal Status: " << std::endl;
+	std::cout << "Name: " << humanCode.getZombieName() << std::endl;
+	humanCode.announce();
+	std::cout << "------------------------------------------" << std::endl;
+	std::cout << "Zombie Pointer Status: " << std::endl;
+	robotCode = newZombie("Thiago Firmino");
+	std::cout << "Name: " << robotCode->getZombieName() << std::endl;	
+	robotCode->announce();
+	std::cout << "------------------------------------------" << std::endl;
+	std::cout << "Zombie Reference Status: " << std::endl;
 	randomChump("Victor Vasconcellos");
-	delete robot_code;
+	std::cout << "------------------------------------------" << std::endl;
+	delete robotCode;
 	return (0);
 }
