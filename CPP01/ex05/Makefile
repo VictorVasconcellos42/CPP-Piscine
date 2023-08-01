@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/22 13:08:00 by vde-vasc          #+#    #+#              #
-#    Updated: 2023/07/18 05:15:29 by vde-vasc         ###   ########.fr        #
+#    Updated: 2023/08/01 14:14:52 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = jordan
 
 CXX	=	c++
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror #-std=c++98
 
 SRCS = main.cpp Harl.cpp
 
