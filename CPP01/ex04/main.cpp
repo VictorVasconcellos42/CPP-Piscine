@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 04:47:35 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/08/01 13:15:26 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/01 13:21:42 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	validateFile(char *file)
 		tmp.close();
 		return (true);
 	}
-	tmp.close();
 	std::cout << "File not exist" << std::endl;
 	return (false);
 }
