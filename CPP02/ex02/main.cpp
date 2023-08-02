@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 02:13:38 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/08/01 17:10:40 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/01 23:49:45 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int main( void )
 {
 	Fixed a(20);
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	Fixed c(10.10f);
 
 	std::cout << "------------------------------------" << std::endl;
 	std::cout << "Arithmetic Operation: " << std::endl;
@@ -31,6 +32,15 @@ int main( void )
 	std::cout << "B value: " << b << std::endl;
 	std::cout << "Min between A and B result: " << Fixed::min(a, b) << std::endl;
 	std::cout << "Max between A and B result: " << Fixed::max( a, b ) << std::endl;
+	std::cout << "------------------------------------" << std::endl;
+	std::cout << "-- and ++ Operation: " << std::endl;
+	std::cout << "C value: " << c << std::endl;
+	std::cout << "++Pre value: " << ++c << std::endl;
+	std::cout << "--Pre: " << --c << std::endl;
+	std::cout << "C++ value: " << c++ << std::endl;
+	std::cout << "C value: " << c << std::endl;
+	std::cout << "C-- value: " << c-- << std::endl;
+	std::cout << "C value: " << c << std::endl;
 	std::cout << "------------------------------------" << std::endl;
 	return 0;
 }

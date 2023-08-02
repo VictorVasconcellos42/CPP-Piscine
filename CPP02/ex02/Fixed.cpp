@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 01:58:15 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/26 14:31:07 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/01 23:46:40 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ Fixed &Fixed::operator =(const Fixed &src)
 
 Fixed &Fixed::operator++(void)
 {
-	this->fixedPointerValue++;
+	this->fixedPointerValue += (1 << this->fractBits);
 	return (*this);
 }
 
@@ -107,13 +107,13 @@ Fixed Fixed::operator++(int)
 	Fixed	tmp;
 
 	tmp = *this;
-	this->fixedPointerValue++;
+	this->fixedPointerValue += (1 << this->fractBits);
 	return (tmp);
 }
 
 Fixed &Fixed::operator--(void)
 {
-	this->fixedPointerValue--;
+	this->fixedPointerValue -= (1 << this->fractBits);
 	return (*this);
 }
 
@@ -122,7 +122,7 @@ Fixed Fixed::operator--(int)
 	Fixed	tmp;
 
 	tmp = *this;
-	this->fixedPointerValue--;
+	this->fixedPointerValue -= (1 << this->fractBits);
 	return (tmp);
 }
 
