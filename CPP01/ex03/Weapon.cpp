@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 01:48:09 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/31 17:50:40 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:37:25 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Weapon::~Weapon(void)
 	return ;
 }
 
-std::string	Weapon::getType(void) const
+const std::string	&Weapon::getType(void) 
 {
 	return (this->type);
 }

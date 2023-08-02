@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 01:45:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/31 17:48:53 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:37:34 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Weapon
 		Weapon(void);
 		Weapon(std::string name);
 		~Weapon();
-		std::string	getType(void) const;
+		const std::string&getType(void);
 		void		setType(std::string type);
 };
 
