@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 09:49:22 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 11:00:46 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:42:05 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	Animal::setType(std::string newType)
 	this->type = newType;
 }
 
-void	Animal::makeSound(void)
+void	Animal::makeSound(void) const
 {
 	std::cout << "I have no idea what the hell I should do :c" << std::endl;
 }
