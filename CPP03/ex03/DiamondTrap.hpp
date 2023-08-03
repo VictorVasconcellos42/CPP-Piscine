@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:48:13 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/28 20:16:34 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 07:25:12 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ class DiamondTrap: public ScavTrap, public FragTrap
 		std::string	getClapTrapName(void) const;
 		void		setName(std::string newName);
 		void		setClapTrapName(std::string newName);
-		void		whoIAm(void);
+		void		whoAmI(void);
 					
 };

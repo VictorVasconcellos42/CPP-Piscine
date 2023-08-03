@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 17:00:29 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/28 20:34:47 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 07:26:02 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ int	main(void)
 	two.takeDamage(one.getAttackDamage());
 	two.attack(one.getName());
 	one.takeDamage(two.getAttackDamage());
+	one.whoAmI();
+	two.whoAmI();
 	return (0);
 }
-
-
-//attack Damage = 30
-//Energy points = 50;
-//Hit points = 100

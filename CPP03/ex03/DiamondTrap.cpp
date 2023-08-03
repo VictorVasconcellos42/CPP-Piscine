@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 18:30:14 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/28 20:47:10 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 07:25:20 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ std::string	DiamondTrap::getClapTrapName(void) const
 	return (ClapTrap::name);
 }
 
-void	DiamondTrap::whoIAm(void)
+void	DiamondTrap::whoAmI(void)
 {
 	if (this->energyPoint != 0)
 	{
