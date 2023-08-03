@@ -6,18 +6,19 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 11:56:46 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/28 20:42:19 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 07:33:21 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name): ClapTrap(name)
+FragTrap::FragTrap(std::string newName): ClapTrap(newName)
 {
 	this->hitPoint = 100;
 	this->energyPoint = 100;
 	this->attackDamage = 30;
-	std::cout << "\e[35;10m" << "FragTrap " << name << " Created!" <<  "\e[m" << std::endl;
+	this->name = newName;
+	std::cout << "\e[35;10m" << "FragTrap " << this->name << " Created!" <<  "\e[m" << std::endl;
 }
 
 FragTrap::FragTrap(void)

@@ -6,13 +6,13 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 18:30:14 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/08/03 07:25:20 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 07:36:15 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void): ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(void): ClapTrap("Vasquinho_clap_name"), ScavTrap(), FragTrap()
 {
 	FragTrap::setHitPoint(100);
 	ScavTrap::setEnergyPoint(50);
@@ -27,7 +27,7 @@ DiamondTrap::DiamondTrap(std::string newName): ClapTrap(newName + "_clap_name"),
 	FragTrap::setHitPoint(100);
 	ScavTrap::setEnergyPoint(50);
 	FragTrap::setAttackDamage(30);
-	std::cout << "DiamondTrap " << name << " Created!" << std::endl;
+	std::cout << "DiamondTrap " << this->name << " Created!" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -62,9 +62,9 @@ void DiamondTrap::setName(std::string newName)
 	this->name = newName;
 }
 
-void	DiamondTrap::setClapTrapName(std::string name)
+void	DiamondTrap::setClapTrapName(std::string clapName)
 {
-	this->ClapTrap::name = name;
+	this->ClapTrap::name = clapName;
 }
 
 std::string	DiamondTrap::getClapTrapName(void) const
