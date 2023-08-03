@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 09:46:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 15:31:51 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:42:47 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ class Cat: public Animal
 		Cat(const Cat &cpy);
 		Cat&operator=(const Cat &src);
 		~Cat();
-		void	makeSound(void);	
+		void	makeSound(void) const;	
 };

@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 09:47:46 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 15:30:44 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:42:52 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ class Dog: public Animal
 		Dog(const Dog &cpy);
 		Dog&operator=(const Dog &src);
 		~Dog();
-		void	makeSound(void);	
+		void	makeSound(void) const;	
 };

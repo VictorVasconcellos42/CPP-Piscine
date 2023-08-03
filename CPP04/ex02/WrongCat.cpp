@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 11:23:14 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 15:17:55 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:44:38 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ WrongCat::~WrongCat(void)
 	std::cout << "Help me! Wrong Cat die! Shut up mother cat" << std::endl;
 }
 
-void	WrongCat::makeSound(void)
+void	WrongCat::makeSound(void) const
 {
 	std::cout << this->getType() <<": Meow Meow Nigga" << std::endl;
 }
