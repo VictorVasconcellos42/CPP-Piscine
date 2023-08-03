@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 10:12:34 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/31 14:40:48 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:43:31 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Dog::~Dog()
 	std::cout << "Dog die! Woof :c" << std::endl;
 }
 
-void	Dog::makeSound(void)
+void	Dog::makeSound(void) const
 {
 	std::cout << this->getType() << ": Woof Woof :)" << std::endl;
 }

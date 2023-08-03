@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 11:30:16 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 15:17:24 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:45:19 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	WrongAnimal::setType(std::string newType)
 	this->type = newType;
 }
 
-void	WrongAnimal::makeSound(void)
+void	WrongAnimal::makeSound(void) const
 {
 	std::cout << "What on earth would a wrong animal sound like?" << std::endl;
 }

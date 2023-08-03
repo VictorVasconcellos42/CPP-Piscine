@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 10:12:05 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/31 15:35:38 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:43:26 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Cat::~Cat(void)
 	std::cout << "Cat die! Shut up mother cat" << std::endl;
 }
 
-void	Cat::makeSound(void)
+void	Cat::makeSound(void) const
 {
 	std::cout << this->getType() << ": Meow Meow :3" << std::endl;
 }

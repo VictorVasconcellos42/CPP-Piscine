@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 09:38:09 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/31 16:12:28 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:41:47 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ class Animal
 		virtual ~Animal();
 		std::string		getType(void) const;
 		void			setType(std::string	newType);
-		virtual void	makeSound(void);
+		virtual void	makeSound(void) const;
 };

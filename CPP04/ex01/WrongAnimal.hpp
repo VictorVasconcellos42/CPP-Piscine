@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 11:21:53 by vde-vasc          #+#    #+#             */
-/*   Updated: 2023/07/29 11:22:55 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2023/08/03 14:45:23 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ class WrongAnimal
 		virtual ~WrongAnimal();
 		std::string		getType(void) const;
 		void			setType(std::string	newType);
-		void			makeSound(void);
+		void			makeSound(void) const;
 };
