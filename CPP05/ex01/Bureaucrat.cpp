@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:24:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/22 22:38:34 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:05:48 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,14 @@ void Bureaucrat::descrementGrade(void)
     if (grade == MIN_GRADE)
         throw Bureaucrat::GradeTooLowException();
     grade++;
+};
+
+char const *Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return "Grade is too high";
+};
+
+char const *Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return "Grade is too low";
 };

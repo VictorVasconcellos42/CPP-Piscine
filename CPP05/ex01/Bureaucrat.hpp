@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 17:43:47 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/22 23:16:09 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:05:42 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,12 @@ class Bureaucrat {
 
 		class GradeTooHighException : public std::exception {
 			public:
-				const char *what() const throw()
-				{
-					return ("Grade is too high");
-				}
+				const char *what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception {
 			public:
-				const char *what() const throw()
-				{
-					return ("Grade is too low");
-				}
+				const char *what() const throw();
 		};
 };
 

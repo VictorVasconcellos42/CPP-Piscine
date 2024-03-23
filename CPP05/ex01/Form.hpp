@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 21:31:31 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/22 23:15:53 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:06:25 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,12 @@ class Form {
 		
 		class GradeTooHighException : public std::exception {
 			public:
-				const char *what() const throw()
-				{
-					return ("Grade is too high");
-				}
+				const char *what() const throw();
 		};
 
 		class GradeTooLowException : public std::exception {
 			public:
-				const char *what() const throw()
-				{
-					return ("Grade is too low");
-				}
+				const char *what() const throw();
 		};
 };
 

@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 21:45:37 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/22 23:16:53 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:06:35 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,14 @@ std::ostream &operator<<(std::ostream &os, const Form &form)
 {
 	os << "Form: " << form.getName() << std::endl << "grade to sign: " << form.getGradeToSign() << std::endl << "grade to execute: " << form.getGradeToExecute() << std::endl << "is signed: " << form.getSign() << ".";
 	return os;
+};
+
+char const *Form::GradeTooHighException::what() const throw()
+{
+	return ("Grade is too high");
+};
+
+char const *Form::GradeTooLowException::what() const throw()
+{
+	return ("Grade is too low");
 };
