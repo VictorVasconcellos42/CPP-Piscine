@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 19:53:39 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/22 19:56:04 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 20:38:06 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ int	main(void)
 		std::cout << politian << std::endl;
 		politian.incrementGrade();
 		politian.descrementGrade();
+		politian.incrementGrade();
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 	return (0);
 }
