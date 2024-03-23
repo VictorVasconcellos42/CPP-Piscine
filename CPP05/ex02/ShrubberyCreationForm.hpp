@@ -6,10 +6,11 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 11:09:27 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/23 15:44:23 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:14:21 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "AForm.hpp"
 
 class ShrubberyCreationForm : public AForm {
