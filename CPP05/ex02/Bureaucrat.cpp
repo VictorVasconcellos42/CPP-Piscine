@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:24:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/23 16:24:44 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:35:20 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,20 @@ void Bureaucrat::signForm(AForm &form)
     catch(const std::exception& e)
     {
         std::cout << this->getName() << " couldn't sing " << form.getName() << " because " << e.what() << std::endl;
+    }
+};
+
+void Bureaucrat::executeForm(AForm const &form)
+{
+    try
+    {
+        form.execute(*this);
+        form.action();
+        std::cout << this->getName() << " executes " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
     }
 };
 

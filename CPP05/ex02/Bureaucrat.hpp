@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 17:43:47 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/23 16:24:33 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:32:50 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class Bureaucrat {
 		void		descrementGrade(void);
 		void		signForm(AForm &form);
 		void		setGrade(int grade);
+		void		executeForm(AForm const &form);
 
 
 		class GradeTooHighException : public std::exception {

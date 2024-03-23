@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 19:53:39 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/23 16:25:33 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:33:34 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,6 @@ int	main(void)
 	std::cout << politian << std::endl;
 	std::cout << form << std::endl;
 	politian.signForm(form);
-	politian.setGrade(1);
-	try
-	{
-		politian.descrementGrade();
-		form.execute(politian);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	politian.executeForm(form);
 	return (0);
 }
