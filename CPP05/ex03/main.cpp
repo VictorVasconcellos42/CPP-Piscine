@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 19:53:39 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/23 17:14:45 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 21:09:04 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,30 @@
 
 int	main(void)
 {
-	Bureaucrat politian("Vasco", 5);
+	Bureaucrat vasco("Vasco", 5);
 	Intern	firmino;
+	AForm	*test;
+	AForm	*shru;
+	AForm	*robo;
+	AForm	*presi;
 
-	try
-	{
-		firmino.makeForm("Robotomy SHELBY", "Vasco");
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	shru = firmino.makeForm("Presidential pardon", "lulinha");
+	robo = firmino.makeForm("Robotomy request", "pablito");
+
+	presi = firmino.makeForm("Shrubbery creation", "gigachad");
+	test = firmino.makeForm("test", "test");
+
+	vasco.signForm(*shru);
+	vasco.signForm(*robo);
+	vasco.signForm(*presi);
+
+	vasco.executeForm(*shru);
+	vasco.executeForm(*robo);
+	vasco.executeForm(*presi);
+
+	if (test != nullptr)
+		vasco.executeForm(*test);
+	else
+		std::cout << "Form not found" << std::endl;
 	return (0);
 }

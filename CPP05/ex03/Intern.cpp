@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 16:44:55 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/23 17:15:37 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/23 20:58:37 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,11 @@ AForm *Intern::makeForm(std::string name, std::string target)
 		default:
 			throw Intern::InvalidFormsNameException();
 		}
+		std::cout << "intern creates " << name << std::endl; 
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << e.what() << std::endl;
 	}
 	return result;
 }
