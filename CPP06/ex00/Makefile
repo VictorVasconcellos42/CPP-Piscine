@@ -1,0 +1,35 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/15 15:33:42 by vde-vasc          #+#    #+#              #
+#    Updated: 2024/03/26 19:40:27 by vde-vasc         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	=	ScalarConverter
+
+COMPILE	=	c++
+
+FLAG	=	-g -Wall -Wextra -Werror #-std=c++98
+
+SRCS	=	main.cpp ScalarConverter.cpp
+
+all: $(NAME)
+
+$(NAME): ${SRCS}
+	${COMPILE} ${FLAG} ${SRCS} -o $(NAME)
+
+clean:
+	@rm -rf ${NAME}
+
+fclean: clean
+	@rm -rf ${NAME}
+
+re: fclean all
+
+.PHONY: all re fclean clean
+
