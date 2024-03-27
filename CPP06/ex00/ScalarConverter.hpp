@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 23:57:33 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/26 19:52:06 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/26 21:04:22 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <iostream>
 #include "Types.hpp"
 #include <cstdlib>
-#include <regex>
 #include <limits>
 
 class ScalarConverter {

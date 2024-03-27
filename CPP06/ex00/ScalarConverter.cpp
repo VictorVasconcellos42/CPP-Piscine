@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 01:16:33 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/26 20:53:57 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/03/26 21:05:58 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,23 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &src)
 
 bool	ScalarConverter::isDecimalNumeric(std::string &literal)
 {
-	std::regex pattern("^[-+]?\\d*\\.?\\d*f?$");
-	return (std::regex_match(literal, pattern));
+	size_t i = 0;
+    if (literal[i] == '+' || literal[i] == '-')
+        i++;
+
+    bool dots = false;
+    while (literal[i] != '\0') {
+        if (!std::isdigit(literal[i])) {
+            if (literal[i] == '.' && !dots)
+                dots = true;
+            else if (literal[i] == 'f' && literal[i + 1] == '\0')
+                return true;
+            else
+                return false;
+        }
+        i++;
+    }
+    return true;
 };
 
 type	ScalarConverter::forScience(std::string &literal)
