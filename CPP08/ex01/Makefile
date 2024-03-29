@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/15 15:33:42 by vde-vasc          #+#    #+#              #
-#    Updated: 2024/03/29 04:10:10 by vde-vasc         ###   ########.fr        #
+#    Updated: 2024/03/29 05:34:49 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ COMPILE	=	c++
 
 FLAG	=	-g -Wall -Wextra -Werror #-std=c++98
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp Span.cpp
 
 all: $(NAME)
 
