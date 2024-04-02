@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 23:42:20 by vde-vasc          #+#    #+#             */
-/*   Updated: 2024/03/30 23:42:22 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2024/04/02 18:07:20 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ std::list<std::pair<int, int> >	listSort(std::string str)
 		std::list<std::pair<int, int> >::iterator i = lst.begin();
 		while (i != lst.end()  && (*i).first < extra)
 			++i;
-		lst.insert(i, std::make_pair<int,int>(extra, -1));
+		lst.insert(i, std::make_pair(extra, -1));
 	}
 	return (lst);
 }
